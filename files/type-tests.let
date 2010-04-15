@@ -1,0 +1,12 @@
+(define (assert pred msg) 
+  (if pred 
+      (print "PASSED: $msg") 
+      (print "FAILED: $msg")))
+  
+(assert (not (pair? 'cat)) "atom is not a pair")
+(assert (pair? '(a b)) "a list is a pair")
+(assert (number? 1) "1 is a number")
+(assert (not (integer? 3.33)) "3.33 is not an integer")
+(assert (equal? '(a b c (d e (f))) '(a b c (d e (f)))) "complex list is equal")
+(assert (equal? 5 5.9) "ints are equal")
+

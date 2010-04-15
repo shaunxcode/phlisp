@@ -1,0 +1,2 @@
+(print (member 's '(q r s t a b c)))
+(print (if (member 's '(q r t)) "s is a member" "s is not a member"))

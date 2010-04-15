@@ -1,0 +1,9 @@
+(define (make-assertions . list)
+   (eachPair (dict list) [msg asrt | if asrt (print "PASS $msg") (print "FAIL $msg")]))
+  
+(make-assertions 
+   "list not a num"   (not (number? '(a b c)))
+   "lists are equal"  (equal? '(a b c) '(a b c))
+   "43.78 is a num"   (number? 43.78))
+  
+([. args | each args [x | print "$x is arg"]] 'a 'b 'c 'd)

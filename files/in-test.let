@@ -1,0 +1,5 @@
+(define (in item . against) 
+ (:in_array item against))
+  
+  
+(print (if (in 'cat 'b 'cat 'd) "inside" "outside"))

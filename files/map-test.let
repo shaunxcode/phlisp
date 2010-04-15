@@ -1,0 +1,18 @@
+(define (assert pred msg) 
+  (if pred 
+      (print "PASSED: $msg") 
+      (print "FAILED: $msg")))
+
+(define (assert-all items) 
+  (eachPair items [msg result | assert result msg]))
+  
+(assert-all {
+    "atom is not a pair" (not (pair? 'cat))
+    "a list is a pair"   (pair? '(a b))
+    "1 is a number"      (number? 1)
+    "3.33 not an int"    (not (integer? 3.33))
+    "lists areis equal"  (equal? '(a b c (d e (f))) '(a b c (d e (f))))
+    "ints are equal"     (equal? 5 5.9)})
+
+
+

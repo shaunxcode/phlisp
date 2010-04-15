@@ -1,0 +1,3 @@
+
+
+(print (apply dict '(:a 34 :b 67)))

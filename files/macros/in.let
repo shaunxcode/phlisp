@@ -1,0 +1,4 @@
+(macro (in item . against)
+  `(:in_array ',item ,against))
+  
+(print (in 'a 'b 'c))

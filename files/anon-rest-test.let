@@ -1,0 +1,5 @@
+(define (in item . against) 
+  `(,item ,against ,@against))
+  
+  
+(print (in 1 2 3 4 5))
